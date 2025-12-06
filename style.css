@@ -1,0 +1,78 @@
+/* تنسيقات أساسية للكل */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: right; /* لمحاذاة النص لليمين للغة العربية */
+}
+
+/* تنسيقات رأس الصفحة (Header) */
+header {
+    background-color: #007bff; /* لون أزرق جذاب */
+    color: white;
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0 20px;
+    font-size: 1.5em;
+}
+
+/* تنسيقات شريط التنقل (Navigation) */
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* تنسيقات قسم الصفحة الرئيسية (Home Section) */
+.home {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: white;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* تنسيقات الأقسام العامة */
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* تنسيقات خاصة بقائمة المنتجات (products.html) */
+.products-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product-item {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.product-item button {
+    background-color: #28a745; /* لون أخضر */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
