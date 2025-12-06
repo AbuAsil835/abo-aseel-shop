@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء حساب جديد</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* يمكنك إضافة هذا الجزء في ملف style.css لاحقاً لتجنب التكرار */
+        .form-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .form-container input[type="text"], 
+        .form-container input[type="email"], 
+        .form-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0 20px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 4px;
+        }
+        .form-container button {
+            background-color: #28a745; /* لون أخضر مختلف */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>أبو أصيل للمنتجات</h1>
+        <nav>
+            <a href="index.html">الرئيسية</a>
+            <a href="products.html">المنتجات</a>
+            <a href="login.html">تسجيل دخول</a>
+            <a href="register.html">إنشاء حساب</a>
+            <a href="contact.html">اتصل بنا</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>إنشاء حساب جديد</h2>
+        <div class="form-container">
+            <form action="#">
+                <label for="reg-name"><b>الاسم الكامل:</b></label>
+                <input type="text" placeholder="أدخل اسمك الكامل" name="reg-name" required>
+
+                <label for="reg-email"><b>البريد الإلكتروني:</b></label>
+                <input type="email" placeholder="أدخل بريدك الإلكتروني" name="reg-email" required>
+
+                <label for="reg-password"><b>كلمة المرور:</b></label>
+                <input type="password" placeholder="اختر كلمة مرور" name="reg-password" required>
+                
+                <button type="submit">إنشاء الحساب</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>
