@@ -1,6 +1,6 @@
 /* تنسيقات أساسية للكل */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -10,12 +10,13 @@ body {
 
 /* تنسيقات رأس الصفحة (Header) */
 header {
-    background-color: #007bff; /* لون أزرق جذاب */
+    background-color: #007bff; /* أزرق جذاب */
     color: white;
     padding: 1em 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 header h1 {
@@ -29,50 +30,165 @@ nav a {
     text-decoration: none;
     padding: 0 15px;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: #ffc107; /* لون أصفر عند التحويم */
 }
 
-/* تنسيقات قسم الصفحة الرئيسية (Home Section) */
-.home {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: white;
-    margin: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-/* تنسيقات الأقسام العامة */
+/* تنسيق الأقسام الرئيسية */
 section {
     padding: 20px;
-    margin: 20px;
+    margin: 20px auto;
     background-color: white;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    max-width: 1200px;
 }
 
-/* تنسيقات خاصة بقائمة المنتجات (products.html) */
-.products-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+/* تنسيق القسم الترويجي (Hero Section) */
+.hero {
+    background-color: #3f51b5; 
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ff4500;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button:hover {
+    background-color: #e03c00;
+    transform: translateY(-2px);
+}
+
+
+/* تنسيقات خاصة بقائمة المنتجات (Grid Layout) */
+
+.products-container {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.products-grid {
+    display: grid;
+    /* 3 أعمدة على الشاشات الكبيرة، وتتكيف على الشاشات الأصغر */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px;
+    margin-top: 30px;
 }
 
 .product-item {
-    border: 1px solid #ccc;
+    background-color: #f9f9f9;
     padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
     border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.price {
+    color: #ff4500;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.description {
+    color: #666;
+    font-size: 0.9em;
 }
 
 .product-item button {
-    background-color: #28a745; /* لون أخضر */
+    background-color: #28a745; 
     color: white;
     border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+    padding: 10px 20px;
+    border-radius: 50px;
     cursor: pointer;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.product-item button:hover {
+    background-color: #1e7e34;
+}
+
+/* تنسيق نماذج تسجيل الدخول/إنشاء حساب (لأنهما متشابهان) */
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.form-container label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.form-container button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
     margin-top: 10px;
+}
+.form-container button:hover {
+    background-color: #0056b3;
 }
